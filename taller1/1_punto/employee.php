@@ -7,7 +7,7 @@ protected $position;
 public  $salary;
 public $transport_Auxilary;
 
-public function _construct(string $vr_Name,$vr_phone_num,string $vr_position,$vr_salary,$vr_transport_Auxilary){
+public function __construct(string $vr_Name,$vr_phone_num,string $vr_position,$vr_salary,$vr_transport_Auxilary){
     $this->Name=$vr_Name;
     $this->phone_num=$vr_phone_num;
     $this->position=$vr_position;
@@ -21,6 +21,7 @@ public function Personal_Information(){
     'Cargo: '=>$this->position,
     'salario: '=>$this->salary,
     'Auxiliar de transporte'=>$this->transport_Auxilary,
+              
 );
 }
 
