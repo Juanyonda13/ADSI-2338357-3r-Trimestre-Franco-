@@ -46,10 +46,10 @@ public function getReturn(){
 public function setRental_Cost($vr_Return){
     $this->Return=$vr_Return;
     if($vr_Return<=5){
-    $fecha_actual = date("d-m-Y");
+    $actual_Date = date("d-m-Y");
     echo "fecha actual : ".$fecha_actual;
     echo "<br>";
-    echo "fecha prevista de entrega : ".date("d-m-Y",strtotime($fecha_actual."+ $vr_Return days")); 
+    echo "fecha prevista de entrega : ".date("d-m-Y",strtotime($actual_Date ."+ $vr_Return days")); 
     $costo=400 * $vr_Return;
     echo "<br>";
     echo " el costo de su alquiler de la pelicula es de ".$costo."$";
