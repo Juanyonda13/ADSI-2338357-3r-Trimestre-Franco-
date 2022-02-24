@@ -47,7 +47,7 @@ public function setRental_Cost($vr_Return){
     $this->Return=$vr_Return;
     if($vr_Return<=5){
     $actual_Date = date("d-m-Y");
-    echo "fecha actual : ".$fecha_actual;
+    echo "fecha actual : ".$actual_Date;
     echo "<br>";
     echo "fecha prevista de entrega : ".date("d-m-Y",strtotime($actual_Date ."+ $vr_Return days")); 
     $costo=400 * $vr_Return;
