@@ -1,0 +1,26 @@
+<?php
+class Conexion{
+protected $db;
+private $driver="mysql";
+private $based ="adsi";
+private $usuario="root";
+private $contrasena="";
+
+public function __construct(){
+
+try {
+    $db= new PDO("{$this->driver}:host={$this->host};dbname={$this->based}",
+    $this->usuario,$this->contraseña);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    return $db;
+} catch (PDOException $e) {
+    echo "Ha ocurrido un  herror al conectarse a la Bd".$e->getMessage();
+}
+
+}
+}
+$conectar =new Conexion();
+print_r("<pre>");
+print_r ("$conectar");
+print_r("</pre>");
+?>
